@@ -1,8 +1,9 @@
 #
-# VERSION               1.0.1
+# VERSION               1.0.2
 
 FROM westfalenyeti01/ubuntu-base
-MAINTAINER Björn Adler <bjoern@dnsgods.de>
+LABEL maintainer="Björn Adler <bjoern@dnsgods.de>"
+
 ENV DEBIAN_FRONTEND=noninteractive LANG=de_DE.UTF-8 LC_ALL=C.UTF-8 LANGUAGE=de_DE.UTF-8
 RUN add-apt-repository ppa:mc3man/xerus-media && add-apt-repository ppa:ondrej/php && apt-get update 
 RUN apt-get install -y nginx php7.0-common php7.0-cli php7.0-fpm php7.0-sqlite3 php7.0-gd php7.0-mbstring ffmpeg lame libmp3lame0 git sqlite3
